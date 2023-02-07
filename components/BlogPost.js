@@ -11,8 +11,17 @@ const BlogPost = ({ title, publishedAt, summary, slug }) => {
   };
 
   return (
-    <NextLink href={`blog/${slug}`} passHref>
-      <Link w="100%" _hover={{ textDecoration: "none" }}>
+    <NextLink href={`templates/${slug}`} passHref >
+      <Link w="100%"
+
+        _hover={{
+          textDecoration: "none", borderWidth: "1px",
+          borderColor: 'gray.300',
+          pb:"2"
+        }}
+        padding={"3"}
+        borderRadius={"8"}
+      >
         <Box mb={10} display="block" width="100%">
           <Flex
             width="100%"

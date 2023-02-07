@@ -1,7 +1,7 @@
 import { Flex, Link, HStack, Icon, Divider, Text } from "@chakra-ui/react";
 import {
     RedditLogo,
-    GithubLogo, TwitterLogo
+    GithubLogo, TwitterLogo, Coins
 } from "phosphor-react";
 
 const FooterIcon = ({ title, icon, link }) => (
@@ -42,6 +42,11 @@ const Footer = () => {
                             title="github"
                             icon={GithubLogo}
                             link="https://github.com/Anslem27"
+                        />
+                        <FooterIcon
+                            title="sponsor"
+                            icon={Coins}
+                            link=""
                         />
                         <Text>&copy; {new Date().getFullYear()} Anslem Seguya </Text>
                     </HStack>

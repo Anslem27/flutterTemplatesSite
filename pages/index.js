@@ -39,10 +39,10 @@ export default function Index() {
         >
           <Heading mb={2}>Flutter Widget and Template components</Heading>
           <Text color={colorSecondary[colorMode]}>
-            Welcome to our Flutter template website! We offer a collection of high-quality templates to help
-            you build stunning mobile apps with ease. Our templates are customizable and updated regularly to
-            stay current with the latest tech. Experience smooth and seamless user experiences with the power
-            of Flutter. We welcome other developers to <Link color={linkColor[colorMode]} >contribute</Link> and expand our collection.
+            Welcome to my Flutter template website! It has a collection of high-quality templates to help
+            you build stunning mobile apps with ease. These templates are updated regularly every once in a while to
+            stay current with the latest dart code. Experience smooth and seamless user experiences with the power
+            of Flutter. I welcome other developers to <Link color={linkColor[colorMode]} >contribute</Link> and expand the collection.
           </Text>
         </Flex>
         <Stats />
