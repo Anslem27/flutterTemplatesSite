@@ -17,7 +17,7 @@ const BlogPost = ({ title, publishedAt, summary, slug }) => {
         _hover={{
           textDecoration: "none", borderWidth: "1px",
           borderColor: 'gray.300',
-          pb:"2"
+          pb: "2"
         }}
         padding={"3"}
         borderRadius={"8"}

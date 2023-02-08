@@ -26,7 +26,7 @@ export default function BlogLayout({ children, frontMatter }) {
   return (
     <NavBar>
       <Head>
-        <title>${slug} - Blog - Benjamin Carlson</title>
+        <title>${slug} - Templates - Flutter</title>
       </Head>
       <Stack
         as="article"

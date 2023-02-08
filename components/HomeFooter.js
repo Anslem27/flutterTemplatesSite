@@ -69,13 +69,14 @@ const HomeFooter = () => {
                     status='success'
                     borderRadius={8}>
                         <GithubLogo
-                            height={25}
-                            width={25}
+                            height={20}
+                            width={20}
                             pl={3}
                         />
                         Didnt Find what you were looking for?
                     </Alert>
                 </Heading>
+                <Text pl={2.5}>I welcome adding a personal contribution to the collection</Text>
                 <Stack direction='row'
                     marginLeft={"auto"}
                     padding={3}>

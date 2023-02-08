@@ -13,8 +13,8 @@ import {
 import NextLink from "next/link";
 import styled from "@emotion/styled";
 import DarkModeSwitch from "./DarkModeSwitch";
-import { HamburgerIcon, ChevronDownIcon } from "@chakra-ui/icons";
-import { Code } from "phosphor-react";
+import { HamburgerIcon } from "@chakra-ui/icons";
+import { Code, BracketsCurly } from "phosphor-react";
 
 const NavBar = ({ children }) => {
   const { colorMode } = useColorMode();
@@ -59,7 +59,7 @@ const NavBar = ({ children }) => {
         mx="auto"
       >
         <Box>
-          <Menu>
+          <Menu >
             <MenuButton
               as={IconButton}
               aria-label='Options'
@@ -67,13 +67,13 @@ const NavBar = ({ children }) => {
               variant='outline'
             />
             <MenuList color={color[colorMode]}>
-              <MenuItem as="a" icon={<ChevronDownIcon />} href="/template_view" passHref>
+              <MenuItem as="a" icon={<BracketsCurly />} href="/templates" passHref>
                 Templates
               </MenuItem>
-              <MenuItem as="a" icon={<Code />} href="/" passHref>
+              <MenuItem as="a" icon={<Code />} href="/widgets" passHref>
                 Widgets
               </MenuItem>
-              <MenuItem as="a" icon={<ChevronDownIcon />} href="/" passHref>
+              <MenuItem as="a" icon={<BracketsCurly />} href="/workflows" passHref>
                 Workflows
               </MenuItem>
             </MenuList>

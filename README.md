@@ -1,6 +1,6 @@
 # Flutter templates website
 
-A simple minimal website with a variety of awesome dart and flutter code and
+A simple minimal blog like website with a variety of awesome dart and flutter code and
 production ready widget templates.
 
 ## Stack

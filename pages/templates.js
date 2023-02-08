@@ -12,6 +12,7 @@ import { getAllFilesFrontMatter } from "../lib/mdx";
 import NavBar from "../components/NavBar";
 import BlogPost from "../components/BlogPost";
 import { SearchIcon } from "@chakra-ui/icons";
+import Footer from "../components/Footer"
 
 export default function Blog({ posts }) {
   const [searchValue, setSearchValue] = useState("");
@@ -46,7 +47,7 @@ export default function Blog({ posts }) {
             px={4}
           >
             <Heading letterSpacing="tight" mb={4} as="h1" size="2xl">
-              Templates ({posts.length} posts)
+              Templates ({posts.length} in total)
             </Heading>
             <InputGroup mb={4} mr={4} w="100%">
               <Input
@@ -63,7 +64,9 @@ export default function Blog({ posts }) {
               <BlogPost key={frontMatter.title} {...frontMatter} />
             ))}
           </Flex>
+          <Footer />
         </Stack>
+       
       </NavBar>
     </>
   );

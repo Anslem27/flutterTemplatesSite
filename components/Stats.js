@@ -1,6 +1,5 @@
 import {
     Box,
-    Center,
     Text,
     HStack,
     Icon,
@@ -16,7 +15,10 @@ const StatItem = ({ icon, title, caption, link }) => {
         <HStack spacing={4}>
             <Icon fontSize="xl" as={icon} />
             <Box>
-                <Link href={link} _hover={{ color: "#1DA1F2" }} isExternal>
+                <Link
+                    href={link}
+                    _hover={{ color: "#1DA1F2" }}
+                    isExternal>
                     <Text
                         fontWeight="regular"
                         maxW={["320px", null, "150px"]}
@@ -39,7 +41,6 @@ const StatItem = ({ icon, title, caption, link }) => {
 
 
 const Stats = () => {
-
 
     return (
         <Box pt={"5"} pb={"5"} >
@@ -70,7 +71,7 @@ const Stats = () => {
                     link=""
                     icon={CodesandboxLogo}
                     title={"Workflows"}
-                    caption={"6 Workflows"}
+                    caption={"2 workflows"}
                 />
             </Stack>
         </Box>
