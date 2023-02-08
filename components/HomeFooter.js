@@ -1,5 +1,9 @@
-import { useColorMode, Flex, Heading, Text, Link, Box, Spacer, Button, Stack } from "@chakra-ui/react";
+import {
+    useColorMode, Flex, Heading, Text, Link, Box, Spacer, Button, Stack, Container, Alert,
+
+} from "@chakra-ui/react";
 import { ArrowForwardIcon, ExternalLinkIcon } from "@chakra-ui/icons";
+import { GithubLogo } from "phosphor-react";
 
 
 const HomeFooter = () => {
@@ -29,11 +33,13 @@ const HomeFooter = () => {
             </Heading>
             <Text color={colorSecondary[colorMode]}>
                 This project is clearly an individualy maintained project, and i may find it hard to always make changes
-                difficult, so any assistance is welcomed.
+                , so any assistance is welcomed.
             </Text>
             <Box pt="8" pb="10" >
                 <Flex flexDirection="row" >
-                    <Heading as={"h2"} fontSize={"18"}
+                    <Heading
+                        as={"h2"}
+                        fontSize={"18"}
                     >Explorer ready to use Flutter Templates
                     </Heading>
                     <Box width={"80%"} />
@@ -46,21 +52,44 @@ const HomeFooter = () => {
                     </Stack>
                 </Flex>
             </Box>
-            <Box pt="8" pb="10" >
-                <Flex flexDirection="row" >
-                    <Heading as={"h2"} fontSize={"18"}
-                    >Didnt Find what you were looking for?
-                    </Heading>
-                    <Box width={"80%"} />
-                    <Stack direction='row' marginLeft={"auto"}>
-                        <Button rightIcon={<ArrowForwardIcon />}
-                            colorScheme='blue' variant='outline'
-                        >
-                            Contribute Component.
-                        </Button>
-                    </Stack>
-                </Flex>
-            </Box>
+            <Container maxW={"100%"} px={[2, 2, 2]}
+                align="start"
+                py={[3, 3, 3]}
+                padding={[5, 7, 7]} pb={"5"}
+                borderWidth={"0.5px"}
+                borderColor={colorSecondary[colorMode]}
+                borderRadius={5}
+            >
+
+
+                <Heading as={"h2"}
+                    fontSize={"18"}
+                    pb="2"
+                ><Alert
+                    status='success'
+                    borderRadius={8}>
+                        <GithubLogo
+                            height={25}
+                            width={25}
+                            pl={3}
+                        />
+                        Didnt Find what you were looking for?
+                    </Alert>
+                </Heading>
+                <Stack direction='row'
+                    marginLeft={"auto"}
+                    padding={3}>
+                    <Button rightIcon={<ArrowForwardIcon />}
+                        colorScheme='blue'
+                        variant='outline'
+                        href="https://github.com/Anslem27/flutterTemplatesSite"
+                        as="a"
+                    >
+                        Contribute Component.
+                    </Button>
+                </Stack>
+            </Container>
+            <Box pt={5} />
             <Link
                 href="https://twitter.com/anslemAnsy"
                 _hover={{ textDecoration: "none" }}

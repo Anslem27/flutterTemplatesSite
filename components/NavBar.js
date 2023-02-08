@@ -1,8 +1,20 @@
 import React from "react";
-import { useColorMode, Button, Flex, Box } from "@chakra-ui/react";
+import {
+  useColorMode,
+  Button,
+  Flex,
+  Box,
+  Menu,
+  MenuItem,
+  MenuButton,
+  MenuList,
+  IconButton
+} from "@chakra-ui/react";
 import NextLink from "next/link";
 import styled from "@emotion/styled";
 import DarkModeSwitch from "./DarkModeSwitch";
+import { HamburgerIcon, ChevronDownIcon } from "@chakra-ui/icons";
+import { Code } from "phosphor-react";
 
 const NavBar = ({ children }) => {
   const { colorMode } = useColorMode();
@@ -47,46 +59,36 @@ const NavBar = ({ children }) => {
         mx="auto"
       >
         <Box>
+          <Menu>
+            <MenuButton
+              as={IconButton}
+              aria-label='Options'
+              icon={<HamburgerIcon />}
+              variant='outline'
+            />
+            <MenuList color={color[colorMode]}>
+              <MenuItem as="a" icon={<ChevronDownIcon />} href="/template_view" passHref>
+                Templates
+              </MenuItem>
+              <MenuItem as="a" icon={<Code />} href="/" passHref>
+                Widgets
+              </MenuItem>
+              <MenuItem as="a" icon={<ChevronDownIcon />} href="/" passHref>
+                Workflows
+              </MenuItem>
+            </MenuList>
+          </Menu>
           <NextLink href="/" passHref>
             <Button
               as="a"
               variant="ghost"
               p={[1, 2, 4]}
-              _hover={{ backgroundColor: navHoverBg[colorMode] }}
+              _hover={{ backgroundColor: navHoverBg[colorMode], p: "2" }}
             >
               Home
             </Button>
           </NextLink>
-          <NextLink href="/template_view" passHref>
-            <Button
-              as="a"
-              variant="ghost"
-              p={[1, 2, 4]}
-              _hover={{ backgroundColor: navHoverBg[colorMode] }}
-            >
-              Templates
-            </Button>
-          </NextLink>
-          <NextLink href="/" passHref>
-            <Button
-              as="a"
-              variant="ghost"
-              p={[1, 2, 4]}
-              _hover={{ backgroundColor: navHoverBg[colorMode] }}
-            >
-              Widgets
-            </Button>
-          </NextLink>
-          <NextLink href="/template_view" passHref>
-            <Button
-              as="a"
-              variant="ghost"
-              p={[1, 2, 4]}
-              _hover={{ backgroundColor: navHoverBg[colorMode] }}
-            >
-              Workflows
-            </Button>
-          </NextLink>
+
         </Box>
         <DarkModeSwitch />
       </StickNav>
@@ -96,7 +98,7 @@ const NavBar = ({ children }) => {
         flexDirection="column"
         bg={bgColor[colorMode]}
         color={color[colorMode]}
-        px={[0, 4, 4]}
+        px={[4, 4, 4]}
         mt={[4, 8, 8]}
       >
 
@@ -107,3 +109,4 @@ const NavBar = ({ children }) => {
 };
 
 export default NavBar;
+
