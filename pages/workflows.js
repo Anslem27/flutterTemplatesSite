@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { getAllFilesFrontMatter } from "../lib/mdx";
 import NavBar from "../components/NavBar";
-import WorkflowCard from "../components/WorkflowCard";
+import WorkflowCard from "../components/WorkFlowCard";
 import { SearchIcon } from "@chakra-ui/icons";
 import Footer from "../components/Footer"
 
