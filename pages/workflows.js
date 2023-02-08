@@ -60,7 +60,7 @@ export default function Widgets({ posts }) {
                                 <SearchIcon color="gray.300" />
                             </InputRightElement>
                         </InputGroup>
-                        {!filteredBlogPosts.length && "No widgets found :(("}
+                        {!filteredBlogPosts.length && "No workflows found :(("}
                         <SimpleGrid columns={[2, 3, 3]} gap={3}>
                             {filteredBlogPosts.map((frontMatter) => (
                                 <WorkflowCard key={frontMatter.title} {...frontMatter} />
