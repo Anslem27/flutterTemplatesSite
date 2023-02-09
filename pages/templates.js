@@ -30,6 +30,7 @@ export default function Blog({ posts }) {
       <Head>
         <title>Templates - Flutter code</title>
       </Head>
+
       <NavBar>
         <Stack
           as="main"
@@ -66,7 +67,7 @@ export default function Blog({ posts }) {
           </Flex>
           <Footer />
         </Stack>
-       
+
       </NavBar>
     </>
   );

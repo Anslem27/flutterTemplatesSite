@@ -1,9 +1,18 @@
 import {
-    useColorMode, Flex, Heading, Text, Link, Box, Spacer, Button, Stack, Container, Alert,
+    useColorMode,
+    Flex,
+    Heading,
+    Text,
+    Link,
+    Box,
+    Button,
+    Stack,
+    Container,
+    Alert,
 
 } from "@chakra-ui/react";
 import { ArrowForwardIcon, ExternalLinkIcon } from "@chakra-ui/icons";
-import { GithubLogo } from "phosphor-react";
+// import { GithubLogo } from "phosphor-react";
 
 
 const HomeFooter = () => {
@@ -61,18 +70,13 @@ const HomeFooter = () => {
                 borderRadius={5}
             >
 
-
                 <Heading as={"h2"}
                     fontSize={"18"}
                     pb="2"
                 ><Alert
                     status='success'
                     borderRadius={8}>
-                        <GithubLogo
-                            height={20}
-                            width={20}
-                            pl={3}
-                        />
+
                         Didnt Find what you were looking for?
                     </Alert>
                 </Heading>

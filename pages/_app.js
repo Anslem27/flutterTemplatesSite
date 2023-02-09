@@ -7,6 +7,7 @@ import {
 import customTheme from "../styles/theme";
 import { Global, css } from "@emotion/react";
 import { prismLightTheme, prismDarkTheme } from "../styles/prism";
+import NextNProgress from 'nextjs-progressbar';
 
 const GlobalStyle = ({ children }) => {
   const { colorMode } = useColorMode();
@@ -41,20 +42,24 @@ const GlobalStyle = ({ children }) => {
   );
 };
 
+
 function MyApp({ Component, pageProps }) {
   return (
-    <ChakraProvider resetCSS theme={customTheme}>
-      <ColorModeProvider
-        options={{
-          initialColorMode: "light",
-          useSystemColorMode: true,
-        }}
-      >
-        <GlobalStyle>
-          <Component {...pageProps} />
-        </GlobalStyle>
-      </ColorModeProvider>
-    </ChakraProvider>
+    <>
+      <NextNProgress /> {/* Loading Animation */}
+      <ChakraProvider resetCSS theme={customTheme}>
+        <ColorModeProvider
+          options={{
+            initialColorMode: "light",
+            useSystemColorMode: true,
+          }}
+        >
+          <GlobalStyle>
+            <Component {...pageProps} />
+          </GlobalStyle>
+        </ColorModeProvider>
+      </ChakraProvider>
+    </>
   );
 }
 

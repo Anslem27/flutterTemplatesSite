@@ -43,6 +43,7 @@ const NavBar = ({ children }) => {
   };
   return (
     <>
+
       <StickNav
         flexDirection="row"
         justifyContent="space-between"

@@ -56,7 +56,7 @@ const Stats = () => {
                     icon={Code}
                     title={"Code Templates"}
                     caption={"12 templates"}
-                    link={"Link"}
+                    link={"/templates"}
                 />
 
 
@@ -64,11 +64,11 @@ const Stats = () => {
                     icon={Bookmarks}
                     title={"Widgets"}
                     caption={"5 Widgets"}
-                    link=""
+                    link="/widgets"
                 />
 
                 <StatItem
-                    link=""
+                    link="/workflows"
                     icon={CodesandboxLogo}
                     title={"Workflows"}
                     caption={"2 workflows"}

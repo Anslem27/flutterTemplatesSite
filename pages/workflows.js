@@ -29,7 +29,7 @@ export default function Widgets({ posts }) {
     return (
         <>
             <Head>
-                <title>workflows - Flutter code</title>
+                <title>Workflows - Flutter code</title>
             </Head>
             <NavBar>
                 <Stack
